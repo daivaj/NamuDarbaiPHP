@@ -61,13 +61,7 @@
             <button>Pirkti</button>
         </td>
     </tr>
-    <tr>
-        <td class="td1">Sviestas</td>
-        <td><img src="http://www.manosveikata.lt/resources/_catalog/dvaras21.jpg"></td>
-        <td class="td1">
-            <button>Parduoti</button>
-        </td>
-    </tr>
+
 </table>
 
 </body>
