@@ -167,81 +167,112 @@
 //
 //$obj = new vardas;
 //$obj->$vardas();
-
-$a = 2;
-$b = $a * 3;
-
-$pareigos = "Marshal";
-$pavarde = 'D\'Artagnan';
-
-$pasisveikinti =
-    "Hello " .$pareigos. " " .$pavarde;
-
-echo $pasisveikinti;
-
-echo '<br>';
-
-
-//$a = -2 + 4;
+//
+//$a = 2;
 //$b = $a * 3;
-//$c = $a / 4;
-//$d = $a % 4;
-//$a *= 2;
+//
+//$pareigos = "Marshal";
+//$pavarde = 'D\'Artagnan';
+//
+//$pasisveikinti =
+//    "Hello " .$pareigos. " " .$pavarde;
+//
+//echo $pasisveikinti;
+//
+//echo '<br>';
+//
+//
+////$a = -2 + 4;
+////$b = $a * 3;
+////$c = $a / 4;
+////$d = $a % 4;
+////$a *= 2;
+//
+//$a = 8;
+////$a++;
+////++$a;
+//$x = $a-- + 2;
+//$y = ++$a * 2;
+//
+//
+//echo $x;
+//echo '<br>';
+//
+//echo $y;
+//echo '<br>';
+//
+//$a = 'D\'Artagnan';
+//$x = count($a);
+//$y = htmlentities("<b>{$a}</b>");
+//$z = html_entity_decode($y);
+//
+//echo $a;
+//echo '<br>';
+//echo $x;
+//echo '<br>';
+//echo $y;
+//echo '<br>';
+//echo $z;
+//
+//$favcolor = "red";
+//
+//switch ($favcolor) {
+//    case "red":
+//        echo "Your favorite color is red!";
+//        break;
+//    case "blue":
+//        echo "Your favorite color is blue!";
+//        break;
+//    case "green":
+//        echo "Your favorite color is green!";
+//        break;
+//    default:
+//        echo "Your favorite color is neither red, blue, nor green!";
+//}
+//
+//echo '<br>';
 
-$a = 8;
-//$a++;
-//++$a;
-$x = $a-- + 2;
-$y = ++$a * 2;
+//$a = array(
+//    [5, 6, 8, 9],
+//    [12, 3, 4, 11],
+//    [7, 5, 15, 10],
+//
+//);
+//
+//var_dump($a);
 
 
-echo $x;
-echo '<br>';
+$suma = 0;
+$i = 0;
 
-echo $y;
-echo '<br>';
-
-$a = 'D\'Artagnan';
-$x = count($a);
-$y = htmlentities("<b>{$a}</b>");
-$z = html_entity_decode($y);
-
-echo $a;
-echo '<br>';
-echo $x;
-echo '<br>';
-echo $y;
-echo '<br>';
-echo $z;
-
-$favcolor = "red";
-
-switch ($favcolor) {
-    case "red":
-        echo "Your favorite color is red!";
-        break;
-    case "blue":
-        echo "Your favorite color is blue!";
-        break;
-    case "green":
-        echo "Your favorite color is green!";
-        break;
-    default:
-        echo "Your favorite color is neither red, blue, nor green!";
+while ($i <= 100){
+    $suma += $i;
+    $i++;
+    echo $suma;
 }
 
-echo '<br>';
+function skyrius(){
+    echo '<hr>';
+    echo '<h1>SKYRIUS</h1>';
+    echo '<br>';
+}
 
-$a = array(
-    [5, 6, 8, 9],
-    [12, 3, 4, 11],
-    [7, 5, 15, 10],
+skyrius();
 
-);
+function faktorialas($a){
+    if ($a == 1)
+    {
+        return $a;
+    } else {
+        return $a * faktorialas($a - 1);
+    }
+}
+echo '3! ='.faktorialas(3). "<br>";
+echo '10! ='.faktorialas(10). "<br>";
 
-var_dump($a);
-
-
+function welcome($name = 'vardenis', $surname = 'pavardenis'){
+    echo 'Labas '.$name.' '.$surname;
+}
 
 ?>
 </body>
