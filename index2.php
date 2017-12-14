@@ -242,38 +242,93 @@
 //var_dump($a);
 
 
-$suma = 0;
-$i = 0;
+//$suma = 0;
+//$i = 0;
+//
+//while ($i <= 100) {
+//    $suma += $i;
+//    $i++;
+//    echo $suma;
+//}
+//
+//function skyrius()
+//{
+//    echo '<hr>';
+//    echo '<h1>SKYRIUS</h1>';
+//    echo '<br>';
+//}
+//
+//skyrius();
+//
+//function faktorialas($a)
+//{
+//    if ($a == 1) {
+//        return $a;
+//    } else {
+//        return $a * faktorialas($a - 1);
+//    }
+//}
+//
+//echo '3! =' . faktorialas(3) . "<br>";
+//echo '10! =' . faktorialas(10) . "<br>";
+//
+//function welcome($name = 'vardenis', $surname = 'pavardenis')
+//{
+//    echo 'Labas ' . $name . ' ' . $surname;
+//}
+//
+//function $arrayAverage($array){
+//$suma = 0;
+//    for ($i = 0; $i < count($array); $i++) {
+//        $suma += $array[$i];
+//
+//    }
+//    $average = $suma / count($array);
+//}
+//
+//$array = [2, 5, 9, 10];
+//echo $arrayAverage($array);
 
-while ($i <= 100){
-    $suma += $i;
-    $i++;
-    echo $suma;
-}
+$array = [
+    ['vardenis',
+        'pavardenis',
+        'el pastas',
+    ],
+    ['vardenis1',
+        'pavardenis1',
+        'el pastas1',
+    ],
+    ['vardenis2',
+        'pavardenis2',
+        'el pastas2',
+    ],
+];
 
-function skyrius(){
-    echo '<hr>';
-    echo '<h1>SKYRIUS</h1>';
-    echo '<br>';
-}
-
-skyrius();
-
-function faktorialas($a){
-    if ($a == 1)
-    {
-        return $a;
-    } else {
-        return $a * faktorialas($a - 1);
+function peopleInfo(array $array)
+{
+    for ($i = 0; $i < count($array); $i++) {
+        echo '<tr>';
+        for ($j = 0; $j < count($array[$i]); $j++) {
+            echo '<td>' .$array[$i][$j]. '</td>';
+        }
+        echo '</tr>';
     }
-}
-echo '3! ='.faktorialas(3). "<br>";
-echo '10! ='.faktorialas(10). "<br>";
-
-function welcome($name = 'vardenis', $surname = 'pavardenis'){
-    echo 'Labas '.$name.' '.$surname;
 }
 
 ?>
+
+<table>
+    <tr>
+        <td>vardas</td>
+        <td>pavarde</td>
+        <td>el. pastas</td>
+    </tr>
+    <tr>
+        <?php peopleInfo($array); ?>
+    </tr>
+
+</table>
+
+
 </body>
 </html>
