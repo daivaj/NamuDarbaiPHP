@@ -289,45 +289,99 @@
 //$array = [2, 5, 9, 10];
 //echo $arrayAverage($array);
 
-$array = [
-    ['vardenis',
-        'pavardenis',
-        'el pastas',
+//$array = [
+//    ['vardenis',
+//        'pavardenis',
+//        'el pastas',
+//    ],
+//    ['vardenis1',
+//        'pavardenis1',
+//        'el pastas1',
+//    ],
+//    ['vardenis2',
+//        'pavardenis2',
+//        'el pastas2',
+//    ],
+//];
+//
+//function peopleInfo(array $array)
+//{
+//    for ($i = 0; $i < count($array); $i++) {
+//        echo '<tr>';
+//        for ($j = 0; $j < count($array[$i]); $j++) {
+//            echo '<td>' .$array[$i][$j]. '</td>';
+//        }
+//        echo '</tr>';
+//    }
+//}
+
+//$a = [5, 6, 10, 15];
+//$b = [8, 5, 3, 25];
+//
+//
+//function product(array $a, array $b){
+//    $sandauga = 0;
+//
+//    for ($i = 0; $i < count($a); $i++){
+//        $sandauga += $a[$i] * $b[$i];
+//    }
+//    return $sandauga;
+//}
+//
+//echo product($a, $b);
+//
+//array_push($a, 25);
+//
+//echo $a;
+
+$a = [
+    '49001010123' => [
+        'vardas' => 'Jonas',
+        'pavarde' => 'Jonaitis',
+        'gdata' => '1990-01-01',
     ],
-    ['vardenis1',
-        'pavardenis1',
-        'el pastas1',
+    '37502055664' => [
+        'vardas' => 'Petras',
+        'pavarde' => 'Petraitis',
+        'gdata' => '1975-02-05',
     ],
-    ['vardenis2',
-        'pavardenis2',
-        'el pastas2',
+    '4951010123' => [
+        'vardas' => 'Jonas1',
+        'pavarde' => 'Jonaitis1',
+        'gdata' => '1995-01-01',
+    ],
+    '37902055664' => [
+        'vardas' => 'Petras1',
+        'pavarde' => 'Petraitis1',
+        'gdata' => '1979-02-05',
     ],
 ];
 
-function peopleInfo(array $array)
+function naujas($a)
 {
-    for ($i = 0; $i < count($array); $i++) {
-        echo '<tr>';
-        for ($j = 0; $j < count($array[$i]); $j++) {
-            echo '<td>' .$array[$i][$j]. '</td>';
+    foreach ($a as $key => $value) {
+//    var_dump($key[0]);
+        if ($key[0] == 3) {
+            unset($a[$key]);
         }
-        echo '</tr>';
     }
+    return $a;
 }
 
+var_dump(naujas($a));
 ?>
 
-<table>
-    <tr>
-        <td>vardas</td>
-        <td>pavarde</td>
-        <td>el. pastas</td>
-    </tr>
-    <tr>
-        <?php peopleInfo($array); ?>
-    </tr>
-
-</table>
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td>vardas</td>-->
+<!--        <td>pavarde</td>-->
+<!--        <td>el. pastas</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        --><?php //peopleInfo($array); ?>
+<!--    </tr>-->
+<!---->
+<!--</table>-->
 
 
 </body>
